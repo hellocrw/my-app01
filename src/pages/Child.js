@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Child.css';
+// import styles from './Child.css';
 
 class Child extends React.Component {
     
@@ -19,7 +19,7 @@ class Child extends React.Component {
 
     render(){
         return(
-            <div className={styles.child}>
+            <div>
                 <h1>child page</h1>
                 {/* 2.父组件-> 子组件 , 子组件利用props接收父组件的值 */}
                 <p>{this.props.name}</p>
