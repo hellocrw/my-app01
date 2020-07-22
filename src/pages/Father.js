@@ -36,7 +36,7 @@ class Father extends React.Component{
     return (
       <div>
         <h1 className={styles.title}>Page Father</h1>
-        <h2>订阅{this.state.searchName}</h2>
+        <p>订阅信息：{this.state.searchName}</p>
         <p>{this.state.childMsg}</p>
         <hr></hr>
         {/* 1.父组件-> 子组件, 发送: name={this.state.name} */}

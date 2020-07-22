@@ -27,6 +27,7 @@ class Users extends React.Component{
   render(){
     return (
       <div>
+        {/* <h1>Users page</h1> */}
         <h1 className={styles.title}>Page users/users</h1>
         {/* 2. 绑定输入信息 ref = {input => this.input = input } */}
         <input name="" ref={input => this.input = input } />
