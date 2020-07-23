@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Father.css';
 import Child from './Child';
 import {PubSub} from 'pubsub-js';
+import ReactDOM from 'react-dom';
 
 class Father extends React.Component{
 
@@ -46,4 +47,8 @@ class Father extends React.Component{
     )
   }
 }
+
+ReactDOM.render(
+  <div>Father 挂载</div>, document.getElementById('clock')
+)
 export default Father;

@@ -8,6 +8,7 @@ class Users extends React.Component{
     super(props);
     this.state = {
       name: 'users',
+      arr: Array(9).fill(1)
     }
   }
 
