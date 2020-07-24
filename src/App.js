@@ -8,6 +8,7 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import Jsx from './pages/jsx/jsx';
 import Comp from './pages/comp/comp'
 
+
 class App extends React.Component{
   
   render(){

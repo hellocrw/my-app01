@@ -3,6 +3,7 @@ import styles from './Father.css';
 import Child from './Child';
 import {PubSub} from 'pubsub-js';
 import ReactDOM from 'react-dom';
+import MyTable from './table/my-table';
 
 class Father extends React.Component{
 
@@ -36,6 +37,7 @@ class Father extends React.Component{
   render(){
     return (
       <div>
+        <MyTable></MyTable>
         <h1 className={styles.title}>Page Father</h1>
         <p>订阅信息：{this.state.searchName}</p>
         <p>{this.state.childMsg}</p>
