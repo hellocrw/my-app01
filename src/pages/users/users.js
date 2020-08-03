@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './users.css';
 import {PubSub} from 'pubsub-js';
+import { Input,Button } from 'antd';
 
 class Users extends React.Component{
 
@@ -8,7 +9,8 @@ class Users extends React.Component{
     super(props);
     this.state = {
       name: 'users',
-      arr: Array(9).fill(1)
+      arr: Array(9).fill(1),
+      searchName: '',
     }
   }
 
@@ -18,21 +20,34 @@ class Users extends React.Component{
    */
   sreach = () =>{
     // 输入关键字
-    const searchName = this.input.value.trim();
+    const searchName = this.state.searchName;
+    console.log(searchName);
     if(searchName){
       // 1. 发布订阅模式：发布消息
       PubSub.publish('search', searchName);
     }
   }
 
+  changeName(event){
+    this.setState({
+      searchName: event.target.value,
+    })
+  }
+
   render(){
     return (
-      <div>
+      <div style={{ textAlign: "center"}}>
         {/* <h1>Users page</h1> */}
         <h1 className={styles.title}>Page users/users</h1>
         {/* 2. 绑定输入信息 ref = {input => this.input = input } */}
-        <input name="" ref={input => this.input = input } />
-        <input type="submit" value="提交" onClick={this.sreach} />
+        <Input value={this.state.searchName} onChange={this.changeName.bind(this)} 
+         ref={input => this.input = input }
+         style={{
+           width:"200px"
+         }}
+         />
+        {/* <input type="submit" value="提交" onClick={this.sreach} /> */}
+        <Button onClick={this.sreach} type="primary">提交</Button>
       </div>
     );
   }

@@ -1,18 +1,22 @@
 import React from 'react';
 // import { render } from 'react-dom';
 import './App.css';
+// import Example from './pages/hook/example/Example';
 import Father from './pages/Father';
 import User from './pages/users/users';
 import Func from './pages/func/func';
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import Jsx from './pages/jsx/jsx';
 import Comp from './pages/comp/comp'
+// import MyLayout from './pages/crw/layout/MyLayout';
 
 
 class App extends React.Component{
   
   render(){
     return (
+      // <Example></Example>
+      // <MyLayout></MyLayout>
       <Router>
         <h1>APP</h1>
         <hr></hr>

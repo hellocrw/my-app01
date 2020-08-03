@@ -4,6 +4,8 @@ import Child from './Child';
 import {PubSub} from 'pubsub-js';
 import ReactDOM from 'react-dom';
 import MyTable from './table/my-table';
+import Example from './hook/example/Example';
+import ExampleA from './hook/example-a/ExampleA';
 
 class Father extends React.Component{
 
@@ -11,7 +13,7 @@ class Father extends React.Component{
     super(props);
     this.state = {
       name: "Father",
-      childMsg: '',
+      childMsg: 'ddddd',
       searchName: '',
     }
   }
@@ -37,6 +39,8 @@ class Father extends React.Component{
   render(){
     return (
       <div>
+        <Example></Example>
+        <ExampleA></ExampleA>
         <MyTable></MyTable>
         <h1 className={styles.title}>Page Father</h1>
         <p>订阅信息：{this.state.searchName}</p>

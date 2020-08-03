@@ -12,6 +12,10 @@ class Child extends React.Component {
         }
     }
 
+    componentWillMount(){
+        console.log('state:', this.props.childMsg);
+    }
+
     toParent =() => {
         // 3. 子组件 -> 父组件
         this.props.parent.getChildMsg(this.state.msg);
